@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
@@ -27,10 +27,12 @@ const useCountdown = (target: Date) => {
 
 export const HeroSection = () => {
   const countdown = useCountdown(EVENT_DATE);
+  const { scrollY } = useScroll();
+  const imgY = useTransform(scrollY, [0, 800], [0, 300]);
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      <img src={heroBanner} alt="Students group photo" width={1920} height={768} className="absolute inset-0 h-full w-full object-cover" />
+      <motion.img src={heroBanner} alt="Students group photo" width={1920} height={768} className="absolute inset-0 h-[120%] w-full object-cover" style={{ y: imgY }} />
       <div className="absolute inset-0 hero-gradient opacity-85" />
       <div className="absolute inset-0 geometric-pattern opacity-40" />
       <div className="container relative z-10 px-4 py-32 text-center">
