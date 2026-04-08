@@ -29,8 +29,10 @@ export const HeroSection = () => {
   const countdown = useCountdown(EVENT_DATE);
 
   return (
-    <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden hero-gradient geometric-pattern">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/20" />
+    <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden">
+      <img src={heroBanner} alt="Students group photo" width={1920} height={768} className="absolute inset-0 h-full w-full object-cover" />
+      <div className="absolute inset-0 hero-gradient opacity-85" />
+      <div className="absolute inset-0 geometric-pattern opacity-40" />
       <div className="container relative z-10 px-4 py-32 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary">
