@@ -57,7 +57,7 @@ export const RegistrationForm = () => {
   };
 
   const onSubmit = (data: FormData) => {
-    const result = addRegistration({ ...data, profession: data.profession || "", image: imagePreview });
+    const result = addRegistration({ name: data.name, batch: data.batch, phone: data.phone, email: data.email || "", profession: data.profession || "", location: data.location, paymentStatus: data.paymentStatus, image: imagePreview });
     if (result.success) {
       toast({ title: "🎉 Success!", description: result.message });
       reset();
