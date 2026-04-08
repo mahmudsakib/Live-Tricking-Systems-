@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
