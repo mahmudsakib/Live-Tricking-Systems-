@@ -1,17 +1,18 @@
 import { motion } from "framer-motion";
 import { Menu, X, Star } from "lucide-react";
 import { useState } from "react";
-import { ThemeToggle } from "./ThemeToggle";
-
-const links = [
-  { label: "Home", href: "#hero" },
-  { label: "Event", href: "#event" },
-  { label: "Register", href: "#register" },
-  { label: "Participants", href: "#participants" },
-];
+import { useTranslation } from "@/hooks/useTranslation";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const t = useTranslation();
+
+  const links = [
+    { label: t.navbar.home, href: "#hero" },
+    { label: t.navbar.event, href: "#event" },
+    { label: "Announcement", href: "#announcement" },
+  ];
 
   return (
     <motion.nav
@@ -22,7 +23,7 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <a href="#hero" className="flex items-center gap-2 font-display text-lg font-bold text-primary">
           <Star className="h-5 w-5 text-secondary" />
-          BMV Reunion
+          {t.navbar.logo}
         </a>
 
         <div className="hidden items-center gap-6 md:flex">
@@ -31,12 +32,11 @@ export const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <ThemeToggle />
+          <LanguageSwitcher />
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
-          <button onClick={() => setOpen(!open)} className="text-foreground">
+          <button type="button" onClick={() => setOpen(!open)} className="text-foreground">
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -50,6 +50,9 @@ export const Navbar = () => {
                 {l.label}
               </a>
             ))}
+            <div className="border-t border-border my-2 pt-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </motion.div>
       )}

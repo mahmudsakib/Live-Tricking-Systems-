@@ -1,0 +1,118 @@
+export const translations = {
+  en: {
+    navbar: {
+      home: "Home",
+      event: "Event",
+      register: "Register",
+      participants: "Participants",
+      logo: "B.H.S",
+    },
+    hero: {
+      schoolName: "Balihari High School",
+      eventTitle: "Eid Reunion 2026",
+      countdown: {
+        days: "days",
+        hours: "hours",
+        minutes: "minutes",
+        seconds: "seconds",
+      },
+      registerButton: "Register Now",
+      stats: {
+        registered: "Registered",
+        batches: "Batches",
+        paid: "Total Amount",
+      },
+    },
+    event: {
+      header: "Event Details",
+      description: "",
+      date: "Date",
+      dateValue: "April 15, 2026 (Wednesday)",
+      time: "Time",
+      timeValue: "10:00 AM – 6:00 PM",
+      venue: "Venue",
+      venueValue: "Balihari High School",
+    },
+    stats: {
+      header: "Live Statistics",
+      totalRegistered: "Total Registered",
+      batchesParticipating: "Batches Participating",
+      paidMembers: "Total Amount",
+      recentlyRegistered: "",
+      noRegistrations: "",
+      noParticipants: "",
+    },
+    announcement: {
+      header: "Important Announcement",
+      message: "Registration fee must be paid before April 30, 2026.",
+    },
+    footer: {
+      schoolName: "Balihari High School",
+      tagline: "Village: Balihari | Post: Kowrikhara | Thana: Nesarabad | Zilla: Pirojpur | Division: Barisal",
+      copyright: "© 2026 Sakib Mahmud. All rights reserved.",
+    },
+    notFound: {
+      code: "404",
+      title: "Oops! Page not found",
+      link: "Return to Home",
+    },
+  },
+  bn: {
+    navbar: {
+      home: "হোম",
+      event: "ইভেন্ট",
+      register: "রেজিস্ট্রেশন",
+      participants: "অংশগ্রহণকারী",
+      logo: "বি.এইচ.এস",
+    },
+    hero: {
+      schoolName: "বালিহারী উচ্চ বিদ্যালয়",
+      eventTitle: "ঈদ পুনর্মিলনী ২০২৬",
+      countdown: {
+        days: "দিন",
+        hours: "ঘণ্টা",
+        minutes: "মিনিট",
+        seconds: "সেকেন্ড",
+      },
+      registerButton: "এখনই নিবন্ধন করুন",
+      stats: {
+        registered: "নিবন্ধিত",
+        batches: "ব্যাচ",
+        paid: "মোট পরিমাণ",
+      },
+    },
+    event: {
+      header: "ইভেন্টের বিবরণ",
+      description: "",
+      date: "তারিখ",
+      dateValue: "এপ্রিল ১৫, ২০২৬ (বুধবার)",
+      time: "সময়",
+      timeValue: "সকাল ১০:০০ – সন্ধ্যা ৬:০০ পর্যন্ত",
+      venue: "স্থান",
+      venueValue: "বালিহারী উচ্চ বিদ্যালয়",
+    },
+    stats: {
+      header: "লাইভ পরিসংখ্যান",
+      totalRegistered: "মোট নিবন্ধিত",
+      batchesParticipating: "অংশগ্রহণকারী ব্যাচ",
+      paidMembers: "মোট পরিমাণ",
+      recentlyRegistered: "",
+      noRegistrations: "",
+      noParticipants: "",
+    },
+    announcement: {
+      header: "গুরুত্বপূর্ণ ঘোষণা",
+      message: "এপ্রিল ৩০, ২০২৬ সালের আগে নিবন্ধন ফি পরিশোধ করতে হবে।",
+    },
+    footer: {
+      schoolName: "বালিহারী উচ্চ বিদ্যালয়",
+      tagline: "গ্রাম: বালিহারী | পোস্ট: কাউরিখার | থানা: নেছারাবাদ | জেলা: পিরোজপুর | বিভাগ: বরিশাল",
+      copyright: "© ২০২৬ সাকিব মাহমুদ। সর্বাধিকার সংরক্ষিত।",
+    },
+    notFound: {
+      code: "404",
+      title: "আপস! পৃষ্ঠা পাওয়া যায়নি",
+      link: "হোমে ফিরে যান",
+    },
+  },
+};

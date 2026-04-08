@@ -1,24 +1,26 @@
 import { motion } from "framer-motion";
 import { Users, Layers, UserCheck } from "lucide-react";
 import { useRegistration } from "@/context/RegistrationContext";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export const StatsSection = () => {
   const { registrations } = useRegistration();
+  const t = useTranslation();
 
   const totalBatches = new Set(registrations.map((r) => r.batch)).size;
   const recent = registrations.slice(0, 5);
 
   const stats = [
-    { icon: Users, label: "Total Registered", value: registrations.length },
-    { icon: Layers, label: "Batches Participating", value: totalBatches },
-    { icon: UserCheck, label: "Paid Members", value: registrations.filter((r) => r.paymentStatus === "paid").length },
+    { icon: Users, label: t.stats.totalRegistered, value: registrations.length },
+    { icon: Layers, label: t.stats.batchesParticipating, value: totalBatches },
+    { icon: UserCheck, label: t.stats.paidMembers, value: registrations.filter((r) => r.paymentStatus === "paid").length },
   ];
 
   return (
     <section className="py-20 bg-muted/50">
       <div className="container px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Live Statistics</h2>
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">{t.stats.header}</h2>
         </motion.div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
@@ -40,7 +42,7 @@ export const StatsSection = () => {
 
         {recent.length > 0 && (
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
-            <h3 className="mb-4 text-center font-display text-xl font-semibold text-foreground">Recently Registered</h3>
+            <h3 className="mb-4 text-center font-display text-xl font-semibold text-foreground">{t.stats.recentlyRegistered}</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {recent.map((r) => (
                 <span key={r.id} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground">
@@ -57,7 +59,7 @@ export const StatsSection = () => {
         )}
 
         {registrations.length === 0 && (
-          <p className="mt-8 text-center text-muted-foreground">No registrations yet. Be the first to register!</p>
+          <p className="mt-8 text-center text-muted-foreground">{t.stats.noRegistrations}</p>
         )}
       </div>
     </section>
