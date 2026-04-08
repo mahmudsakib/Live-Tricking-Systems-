@@ -30,6 +30,12 @@ export const HeroSection = () => {
   const countdown = useCountdown(EVENT_DATE);
   const { scrollY } = useScroll();
   const imgY = useTransform(scrollY, [0, 800], [0, 300]);
+  const { registrations } = useRegistration();
+
+  const totalBatches = new Set(registrations.map((r) => r.batch)).size;
+  const paidCount = registrations.filter((r) => r.paymentStatus === "paid").length;
+
+  const floatDelay = [0, 0.5, 1, 1.5];
 
   return (
     <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden">
@@ -69,11 +75,16 @@ export const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.45 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
-          {(["days", "hours", "minutes", "seconds"] as const).map((unit) => (
-            <div key={unit} className="flex flex-col items-center rounded-xl bg-primary-foreground/10 px-5 py-3 backdrop-blur-sm">
+          {(["days", "hours", "minutes", "seconds"] as const).map((unit, i) => (
+            <motion.div
+              key={unit}
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: floatDelay[i] }}
+              className="flex flex-col items-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/10 px-5 py-3 backdrop-blur-sm"
+            >
               <span className="font-display text-3xl font-bold text-primary-foreground">{countdown[unit]}</span>
               <span className="text-xs uppercase tracking-wider text-primary-foreground/60">{unit}</span>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -83,6 +94,28 @@ export const HeroSection = () => {
               Register Now <ArrowDown className="ml-2 h-4 w-4" />
             </a>
           </Button>
+        </motion.div>
+
+        {/* Registration Stats in Hero */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.75 }}
+          className="mx-auto mt-12 flex max-w-lg flex-wrap items-center justify-center gap-6 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-6 py-5 backdrop-blur-md"
+        >
+          {[
+            { icon: Users, label: "Registered", value: registrations.length },
+            { icon: Layers, label: "Batches", value: totalBatches },
+            { icon: UserCheck, label: "Paid", value: paidCount },
+          ].map((s) => (
+            <div key={s.label} className="flex items-center gap-2.5">
+              <s.icon className="h-5 w-5 text-secondary" />
+              <div className="text-left">
+                <div className="font-display text-2xl font-bold leading-none text-primary-foreground">{s.value}</div>
+                <div className="text-xs text-primary-foreground/60">{s.label}</div>
+              </div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>
