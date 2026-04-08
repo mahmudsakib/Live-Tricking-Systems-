@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, CalendarDays } from "lucide-react";
+import { ArrowDown, CalendarDays, Users, Layers, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { useRegistration } from "@/context/RegistrationContext";
 import heroBanner from "@/assets/hero-banner.jpg";
 
 const EVENT_DATE = new Date("2026-04-15T10:00:00");
