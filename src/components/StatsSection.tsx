@@ -2,20 +2,18 @@ import { motion } from "framer-motion";
 import { Users, Layers, UserCheck } from "lucide-react";
 import { useRegistration } from "@/context/RegistrationContext";
 import { useTranslation } from "@/hooks/useTranslation";
+import { STATS_VALUES } from "@/lib/statsConstants";
 
 export const StatsSection = () => {
   const { registrations } = useRegistration();
   const t = useTranslation();
 
-  const totalBatches = new Set(registrations.map((r) => r.batch)).size;
-  const paidCount = registrations.filter((r) => r.paymentStatus === "paid").length;
-  const guestCount = registrations.filter((r) => r.registrationType === "guest" && r.paymentStatus === "paid").length;
   const recent = registrations.slice(0, 5);
 
   const stats = [
-    { icon: Users, label: t.stats.totalRegistered, value: registrations.length },
-    { icon: Layers, label: t.stats.batchesParticipating, value: totalBatches },
-    { icon: UserCheck, label: t.stats.paidMembers, value: guestCount > 0 ? `${paidCount} (${guestCount}G)` : paidCount },
+    { icon: Users, label: t.stats.totalRegistered, value: STATS_VALUES.totalRegistered },
+    { icon: Layers, label: t.stats.batchesParticipating, value: STATS_VALUES.batchesParticipating },
+    { icon: UserCheck, label: t.stats.paidMembers, value: STATS_VALUES.paidMembers },
   ];
 
   return (

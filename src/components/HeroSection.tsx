@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useRegistration } from "@/context/RegistrationContext";
 import { useTranslation } from "@/hooks/useTranslation";
+import { STATS_VALUES } from "@/lib/statsConstants";
 import heroBanner from "@/assets/hero-banner.jpg";
 
 const EVENT_DATE = new Date("2026-04-30T10:00:00");
@@ -41,11 +42,7 @@ export const HeroSection = () => {
   const countdown = useCountdown(EVENT_DATE);
   const { scrollY } = useScroll();
   const imgY = useTransform(scrollY, [0, 800], [0, 300]);
-  const { registrations } = useRegistration();
   const t = useTranslation();
-
-  const totalBatches = new Set(registrations.map((r) => r.batch)).size;
-  const paidCount = registrations.filter((r) => r.paymentStatus === "paid").length;
 
   const floatDelay = [0, 0.5, 1, 1.5];
 
@@ -69,7 +66,7 @@ export const HeroSection = () => {
         >
           বালিহারী মাধ্যমিক বিদ্যালয়
           <br />
-          <span className="text-gradient-gold">ঈদ পুনর্মিলনী ২০২৬</span>
+          <span className="text-gradient-gold">ঈদ পুনর্মিলনী - ২০২৬</span>
         </motion.h1>
 
         <motion.p
@@ -114,9 +111,9 @@ export const HeroSection = () => {
           className="mx-auto mt-12 flex max-w-lg flex-wrap items-center justify-center gap-6 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-6 py-5 backdrop-blur-md"
         >
           {[
-            { icon: Users, label: t.hero.stats.registered, value: registrations.length },
-            { icon: Layers, label: t.hero.stats.batches, value: totalBatches },
-            { icon: UserCheck, label: t.hero.stats.paid, value: paidCount },
+            { icon: Users, label: t.hero.stats.registered, value: STATS_VALUES.totalRegistered },
+            { icon: Layers, label: t.hero.stats.batches, value: STATS_VALUES.batchesParticipating },
+            { icon: UserCheck, label: t.hero.stats.paid, value: STATS_VALUES.paidMembers },
           ].map((s) => (
             <div key={s.label} className="flex items-center gap-2.5">
               <s.icon className="h-6 w-10 text-secondary" />
