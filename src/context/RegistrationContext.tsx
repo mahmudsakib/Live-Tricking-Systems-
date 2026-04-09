@@ -9,6 +9,7 @@ export interface Registration {
   profession: string;
   location: string;
   paymentStatus: "paid" | "pending";
+  registrationType: "student" | "guest";
   image: string;
   createdAt: string;
 }

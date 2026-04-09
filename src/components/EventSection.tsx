@@ -12,7 +12,7 @@ export const EventSection = () => {
   ];
 
   return (
-    <section id="event" className="py-20">
+    <section id="event" className="py-20 bg-blue-50">
       <div className="container px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">{t.event.header}</h2>
@@ -21,7 +21,7 @@ export const EventSection = () => {
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
           {details.map((d, i) => (
             <motion.div
               key={d.label}
@@ -29,7 +29,7 @@ export const EventSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-gradient rounded-xl border border-border p-6 shadow-elegant text-center"
+              className="card-gradient rounded-xl border border-border p-8 shadow-elegant text-center"
             >
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                 <d.icon className="h-6 w-6 text-primary" />
