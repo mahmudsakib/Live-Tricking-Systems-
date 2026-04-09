@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import schoolLogo from "@/assets/school-logo.png";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [logoError, setLogoError] = useState(false);
   const t = useTranslation();
 
   const links = [
@@ -19,21 +19,16 @@ export const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 border-b border-green-700/30 bg-green-600/95 backdrop-blur-lg transition-all duration-300 hover:bg-green-700/95"
+      className="fixed top-0 left-0 right-0 z-50 border-b-4 border-white bg-green-600/95 backdrop-blur-lg transition-all duration-300 hover:bg-green-700/95"
     >
-      <div className="container mx-auto flex items-center justify-between px-3 py-3 sm:px-4 sm:py-4">
-        <a href="#hero" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-  {!logoError ? (
-    <img
-      src="/school-logo.jpg"
-      alt="Balihari High School"
-      className="h-12 w-auto sm:h-14"
-      onError={() => setLogoError(true)}
-    />
-  ) : (
-    <span className="text-lg font-semibold">Balihari High School</span>
-  )}
-</a>
+      <div className="container mx-auto flex items-stretch justify-between px-3 sm:px-4">
+        <a href="#hero" className="flex items-center hover:opacity-90 transition-opacity">
+          <img 
+            src={schoolLogo} 
+            alt="Balihari High School" 
+            className="h-auto max-h-20 sm:max-h-24 w-auto object-contain drop-shadow-lg" 
+          />
+        </a>
 
         <div className="hidden items-center gap-6 sm:gap-8 md:flex">
           {links.map((l) => (

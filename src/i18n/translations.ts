@@ -7,6 +7,12 @@ export const translations = {
       announcement: "Announcement",
       logo: "B.H.S",
     },
+    welcome: {
+      title: "Welcome to",
+      subtitle: "Eid Reunion 2026",
+      message: "A celebration of memories and reunion of old friends",
+      enterButton: "Enter",
+    },
     topBanner: {
       message: "🎊 Eid Reunion 2026 - Balihari Secondary School - All former students are cordially invited!",
     },
@@ -51,7 +57,7 @@ export const translations = {
     },
     footer: {
       schoolName: "Balihari High School",
-      tagline: "Village: Balihari | Post: Kowrikhara | Thana: Nesarabad | Zilla: Pirojpur | Division: Barisal",
+      tagline: "Balihari | Kowrikhara | Nesarabad | Pirojpur",
       copyright: "© 2026 Sakib Mahmud. All rights reserved.",
     },
     notFound: {
@@ -67,6 +73,12 @@ export const translations = {
       participants: "অংশগ্রহণকারী",
       announcement: "ঘোষণা",
       logo: "বি.এইচ.এস",
+    },
+    welcome: {
+      title: "স্বাগতম জানাই",
+      subtitle: "ঈদ পুনর্মিলনী ২০২৬",
+      message: "স্মৃতি এবং সুস্মৃতির পুনর্বিলয়",
+      enterButton: "প্রবেশ করুন",
     },
     topBanner: {
       message: "🎊 বালিহারী মাধ্যমিক বিদ্যালয়ের প্রাক্তন শিক্ষার্থীদের অংশগ্রহণে ঈদের তৃতীয় দিনে অনুষ্ঠিত হতে যাচ্ছে ঈদ পুনর্মিলনী—সকলকে আন্তরিক আমন্ত্রণ।",
@@ -84,16 +96,16 @@ export const translations = {
       stats: {
         registered: "নিবন্ধিত",
         batches: "ব্যাচ",
-        paid: "প্রদত্ত সদস্য",
+        paid: "অতিথি",
       },
     },
     event: {
       header: "ইভেন্টের বিবরণ",
       description: "",
       date: "তারিখ",
-      dateValue: "এপ্রিল ১৫, ২০২৬ (বুধবার)",
+      dateValue: "ঈদের তৃতীয় দিনে অনুষ্ঠিত",
       time: "সময়",
-      timeValue: "সকাল ১০:০০ – সন্ধ্যা ৬:০০ পর্যন্ত",
+      timeValue: "সারাদিন",
       venue: "স্থান",
       venueValue: "বালিহারী মাধ্যমিক বিদ্যালয়",
     },
@@ -112,7 +124,7 @@ export const translations = {
     },
     footer: {
       schoolName: "বালিহারী মাধ্যমিক বিদ্যালয়",
-      tagline: "গ্রাম: বালিহারী | পোস্ট: কৌরিখাড়া | থানা: নেছারাবাদ | জেলা: পিরোজপুর | বিভাগ: বরিশাল",
+      tagline: "বালিহারী | কৌরিখাড়া | নেছারাবাদ | পিরোজপুর",
       copyright: "© ২০২৬ সাকিব মাহমুদ। সর্বাধিকার সংরক্ষিত।",
     },
     notFound: {
