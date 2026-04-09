@@ -6,6 +6,7 @@ import { useRegistration } from "@/context/RegistrationContext";
 import { useTranslation } from "@/hooks/useTranslation";
 import { STATS_VALUES } from "@/lib/statsConstants";
 import heroBanner from "@/assets/hero-banner.jpg";
+import schoolLogo from "@/assets/school-logo.png";
 
 const EVENT_DATE = new Date("2026-04-30T10:00:00");
 
@@ -58,11 +59,20 @@ export const HeroSection = () => {
           </span>
         </motion.div> */}
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: -50 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0 }}
+          className="flex justify-center -mt-24 mb-0"
+        >
+          <img src={schoolLogo} alt="School Logo" className="h-48 w-48 object-contain drop-shadow-lg" />
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="mt-9 font-display text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mt-0 font-display text-4xl font-bold leading-tight text-primary-foreground sm:text-5xl md:text-6xl lg:text-7xl"
         >
           বালিহারী মাধ্যমিক বিদ্যালয়
           <br />
@@ -95,34 +105,34 @@ export const HeroSection = () => {
           ))}
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-          <Button asChild size="lg" className="mt-10 gold-gradient border-0 text-foreground font-semibold shadow-gold hover:opacity-90 transition-opacity text-base px-8 py-6">
-            <a href="#register">
-              {t.hero.registerButton} <ArrowDown className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
-        </motion.div>
-
         {/* Registration Stats in Hero */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75 }}
-          className="mx-auto mt-12 flex max-w-lg flex-wrap items-center justify-center gap-6 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-6 py-5 backdrop-blur-md"
+          className="mx-auto mt-12 flex max-w-4xl flex-wrap items-center justify-center gap-8 rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 px-10 py-10 backdrop-blur-md"
         >
           {[
             { icon: Users, label: t.hero.stats.registered, value: STATS_VALUES.totalRegistered },
             { icon: Layers, label: t.hero.stats.batches, value: STATS_VALUES.batchesParticipating },
             { icon: UserCheck, label: t.hero.stats.paid, value: STATS_VALUES.paidMembers },
           ].map((s) => (
-            <div key={s.label} className="flex items-center gap-2.5">
-              <s.icon className="h-6 w-10 text-secondary" />
-              <div className="text-left">
-                <div className="font-display text-2xl font-bold leading-none text-primary-foreground">{s.value}</div>
-                <div className="text-xs text-primary-foreground/60">{s.label}</div>
+            <div key={s.label} className="flex flex-col items-center gap-3">
+              <s.icon className="h-10 w-10 text-secondary" />
+              <div className="text-center">
+                <div className="font-display text-5xl font-bold leading-none text-primary-foreground">{s.value}</div>
+                <div className="text-sm text-primary-foreground/60">{s.label}</div>
               </div>
             </div>
           ))}
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }}>
+          <Button asChild size="lg" className="mt-10 gold-gradient border-0 text-foreground font-semibold shadow-gold hover:opacity-90 transition-opacity text-base px-8 py-6">
+            <a href="#register">
+              {t.hero.registerButton} <ArrowDown className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

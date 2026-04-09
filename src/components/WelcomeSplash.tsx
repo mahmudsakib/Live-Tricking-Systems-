@@ -32,7 +32,7 @@ export const WelcomeSplash = () => {
             <img 
               src={schoolLogo} 
               alt="Balihari High School" 
-              className="h-54 sm:h-68 w-auto drop-shadow-2xl"
+              className="h-52 sm:h-68 w-auto drop-shadow-2xl"
             />
           </motion.div>
         </motion.div>

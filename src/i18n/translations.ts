@@ -27,7 +27,7 @@ export const translations = {
       },
       registerButton: "Register Now",
       stats: {
-        registered: "Registered",
+        registered: "Registered Students",
         batches: "Batches",     
            paid: "Guest Members",
       },
@@ -44,9 +44,9 @@ export const translations = {
     },
     stats: {
       header: "Live Statistics",
-      totalRegistered: "Total Registered",
+      totalRegistered: "Total Registered Students",
       batchesParticipating: "Batches Participating",
-      paidMembers: "Guests",
+      paidMembers: "Guests Number",
       recentlyRegistered: "",
       noRegistrations: "",
       noParticipants: "",
@@ -96,7 +96,7 @@ export const translations = {
       stats: {
         registered: "নিবন্ধিত",
         batches: "ব্যাচ",
-        paid: "অতিথি",
+        paid: "অতিথি সংখ্যা",
       },
     },
     event: {
@@ -111,9 +111,9 @@ export const translations = {
     },
     stats: {
       header: "লাইভ পরিসংখ্যান",
-      totalRegistered: "মোট নিবন্ধিত",
+      totalRegistered: "মোট নিবন্ধিত সংখ্যা",
       batchesParticipating: "অংশগ্রহণকারী ব্যাচ",
-      paidMembers: "অতিথি",
+      paidMembers: "অতিথি সংখ্যা",
       recentlyRegistered: "",
       noRegistrations: "",
       noParticipants: "",

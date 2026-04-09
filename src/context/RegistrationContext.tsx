@@ -20,6 +20,7 @@ interface RegistrationContextType {
   searchQuery: string;
   setSearchQuery: (q: string) => void;
   filteredRegistrations: Registration[];
+  clearRegistrations: () => void;
 }
 
 const RegistrationContext = createContext<RegistrationContextType | undefined>(undefined);
@@ -27,14 +28,8 @@ const RegistrationContext = createContext<RegistrationContextType | undefined>(u
 const STORAGE_KEY = "eid_reunion_registrations";
 
 export const RegistrationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [registrations, setRegistrations] = useState<Registration[]>(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      return stored ? JSON.parse(stored) : [];
-    } catch {
-      return [];
-    }
-  });
+  // Start with empty registrations - only load from SAMPLE_REGISTRATIONS
+  const [registrations, setRegistrations] = useState<Registration[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
@@ -52,7 +47,7 @@ export const RegistrationProvider: React.FC<{ children: React.ReactNode }> = ({ 
         id: crypto.randomUUID(),
         createdAt: new Date().toISOString(),
       };
-      setRegistrations((prev) => [newReg, ...prev]);
+      setRegistrations((prev) => [...prev, newReg]);
       return { success: true, message: "Registration successful! Welcome to the reunion." };
     },
     [registrations]
@@ -64,8 +59,13 @@ export const RegistrationProvider: React.FC<{ children: React.ReactNode }> = ({ 
     return r.name.toLowerCase().includes(q) || r.batch.toLowerCase().includes(q);
   });
 
+  const clearRegistrations = useCallback(() => {
+    setRegistrations([]);
+    localStorage.removeItem(STORAGE_KEY);
+  }, []);
+
   return (
-    <RegistrationContext.Provider value={{ registrations, addRegistration, searchQuery, setSearchQuery, filteredRegistrations }}>
+    <RegistrationContext.Provider value={{ registrations, addRegistration, searchQuery, setSearchQuery, filteredRegistrations, clearRegistrations }}>
       {children}
     </RegistrationContext.Provider>
   );
