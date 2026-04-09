@@ -1,21 +1,46 @@
 import { motion } from "framer-motion";
 import { Users, Layers, UserCheck } from "lucide-react";
+import { useEffect } from "react";
 import { useRegistration } from "@/context/RegistrationContext";
 import { useTranslation } from "@/hooks/useTranslation";
+import { STATS_VALUES } from "@/lib/statsConstants";
+
+// Sample data - Edit here to change what appears in the table (Only Name and Batch are displayed)
+const SAMPLE_REGISTRATIONS = [
+  { name: "Mahfuzur Rahman jitu", batch: "2023" },
+  { name: "MD:Alamin", batch: "2022" },
+];
 
 export const StatsSection = () => {
-  const { registrations } = useRegistration();
+  const { registrations, addRegistration } = useRegistration();
   const t = useTranslation();
-
-  const totalBatches = new Set(registrations.map((r) => r.batch)).size;
-  const paidCount = registrations.filter((r) => r.paymentStatus === "paid").length;
-  const guestCount = registrations.filter((r) => r.registrationType === "guest" && r.paymentStatus === "paid").length;
-  const recent = registrations.slice(0, 5);
+  
+  // Initialize only with sample data - ignore all other data sources
+  useEffect(() => {
+    // Clear localStorage completely
+    localStorage.removeItem("eid_reunion_registrations");
+    
+    // Small delay to ensure localStorage is cleared before adding new data
+    setTimeout(() => {
+      SAMPLE_REGISTRATIONS.forEach(reg => {
+        addRegistration({ 
+          ...reg, 
+          phone: "", 
+          email: "", 
+          profession: "", 
+          location: "", 
+          paymentStatus: "paid", 
+          registrationType: "student", 
+          image: "" 
+        });
+      });
+    }, 0);
+  }, []); // Only run on mount
 
   const stats = [
-    { icon: Users, label: t.stats.totalRegistered, value: registrations.length },
-    { icon: Layers, label: t.stats.batchesParticipating, value: totalBatches },
-    { icon: UserCheck, label: t.stats.paidMembers, value: guestCount > 0 ? `${paidCount} (${guestCount}G)` : paidCount },
+    { icon: Users, label: t.stats.totalRegistered, value: STATS_VALUES.totalRegistered },
+    { icon: Layers, label: t.stats.batchesParticipating, value: STATS_VALUES.batchesParticipating },
+    { icon: UserCheck, label: t.stats.paidMembers, value: STATS_VALUES.paidMembers },
   ];
 
   return (
@@ -42,26 +67,43 @@ export const StatsSection = () => {
           ))}
         </div>
 
-        {recent.length > 0 && (
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-10">
-            <h3 className="mb-4 text-center font-display text-xl font-semibold text-foreground">{t.stats.recentlyRegistered}</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {recent.map((r) => (
-                <span key={r.id} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground">
-                  {r.image ? (
-                    <img src={r.image} alt={r.name} className="h-6 w-6 rounded-full object-cover" />
-                  ) : (
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs text-primary-foreground">{r.name[0]}</span>
-                  )}
-                  {r.name} <span className="text-muted-foreground">({r.batch})</span>
-                </span>
-              ))}
+        {registrations.length > 0 && (
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-16">
+            <h3 className="mb-6 text-center font-display text-2xl font-semibold text-foreground">All Registrations</h3>
+            
+            <div className="overflow-x-auto rounded-lg border border-border shadow-md">
+              <table className="w-full bg-white">
+                <thead>
+                  <tr className="bg-gradient-to-r from-slate-100 to-slate-200 border-b-2 border-border">
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-foreground">SL No.</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-foreground">Name</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-foreground">Batch</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-foreground">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {registrations.slice(0, 15).map((reg, idx) => (
+                    <tr key={reg.id} className="border-b border-border hover:bg-slate-50 transition-colors">
+                      <td className="px-6 py-4 text-sm font-medium text-foreground">{idx + 1}</td>
+                      <td className="px-6 py-4 text-sm text-foreground font-semibold">{reg.name}</td>
+                      <td className="px-6 py-4 text-sm text-muted-foreground">{reg.batch}</td>
+                      <td className="px-6 py-4 text-center">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          Confirm
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          </motion.div>
-        )}
 
-        {registrations.length === 0 && (
-          <p className="mt-8 text-center text-muted-foreground">{t.stats.noRegistrations}</p>
+            {registrations.length > 15 && (
+              <p className="mt-4 text-center text-sm text-muted-foreground">
+                Showing 15 of {registrations.length} registrations
+              </p>
+            )}
+          </motion.div>
         )}
       </div>
     </section>
