@@ -8,16 +8,18 @@ export const StatsSection = () => {
   const t = useTranslation();
 
   const totalBatches = new Set(registrations.map((r) => r.batch)).size;
+  const paidCount = registrations.filter((r) => r.paymentStatus === "paid").length;
+  const guestCount = registrations.filter((r) => r.registrationType === "guest" && r.paymentStatus === "paid").length;
   const recent = registrations.slice(0, 5);
 
   const stats = [
     { icon: Users, label: t.stats.totalRegistered, value: registrations.length },
     { icon: Layers, label: t.stats.batchesParticipating, value: totalBatches },
-    { icon: UserCheck, label: t.stats.paidMembers, value: registrations.filter((r) => r.paymentStatus === "paid").length },
+    { icon: UserCheck, label: t.stats.paidMembers, value: guestCount > 0 ? `${paidCount} (${guestCount}G)` : paidCount },
   ];
 
   return (
-    <section className="py-20 bg-muted/50">
+    <section className="py-20 bg-slate-50">
       <div className="container px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">{t.stats.header}</h2>

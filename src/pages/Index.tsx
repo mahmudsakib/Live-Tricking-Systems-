@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { TopAnnouncementBanner } from "@/components/TopAnnouncementBanner";
 import { HeroSection } from "@/components/HeroSection";
 import { EventSection } from "@/components/EventSection";
 import { StatsSection } from "@/components/StatsSection";
@@ -11,6 +12,7 @@ const Index = () => (
   <LanguageProvider>
     <RegistrationProvider>
       <Navbar />
+      <TopAnnouncementBanner />
       <HeroSection />
       <StatsSection />
       <EventSection />
