@@ -9,6 +9,9 @@ import { STATS_VALUES } from "@/lib/statsConstants";
 const SAMPLE_REGISTRATIONS = [
   { name: "Mahfuzur Rahman jitu", batch: "2023" },
   { name: "MD:Alamin", batch: "2022" },
+  { name: "MD Nayeem babu", batch: "2016" },
+  { name: "Md Ariful Islam Akash ", batch: "2018" },
+  { name: "Md Fahim Shahriar  ", batch: "2021" },
 ];
 
 export const StatsSection = () => {
