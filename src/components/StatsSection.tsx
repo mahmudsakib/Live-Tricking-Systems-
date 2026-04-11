@@ -77,16 +77,16 @@ export const StatsSection = () => {
 
         {registrations.length > 0 && (
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-16">
-            <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-semibold text-foreground">All Registrations</h3>
+            <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-semibold text-foreground">{t.stats.allRegistrationsTitle}</h3>
             
             <div className="-mx-4 sm:mx-0 overflow-x-auto rounded-none sm:rounded-lg border border-border shadow-none sm:shadow-md">
               <table className="w-full bg-white min-w-full">
                 <thead>
                   <tr className="bg-gradient-to-r from-slate-100 to-slate-200 border-b-2 border-border">
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">SL No.</th>
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">Name</th>
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">Batch</th>
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-semibold text-foreground">Registration</th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.slNo}</th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.name}</th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.batch}</th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-semibold text-foreground">{t.stats.registration}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -114,14 +114,14 @@ export const StatsSection = () => {
 
             {/* Batch-wise Registration Count Summary */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12">
-              <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-semibold text-foreground">Registration by Batch</h3>
+              <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-semibold text-foreground">{t.stats.registrationByBatchTitle}</h3>
               
               <div className="-mx-4 sm:mx-0 overflow-x-auto rounded-none sm:rounded-lg border border-border shadow-none sm:shadow-md">
                 <table className="w-full bg-white min-w-full">
                   <thead>
                     <tr className="bg-gradient-to-r from-slate-100 to-slate-200 border-b-2 border-border">
-                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">Batch</th>
-                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-semibold text-foreground">Total Registrations</th>
+                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.batch}</th>
+                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-semibold text-foreground">{t.stats.totalRegistrations}</th>
                     </tr>
                   </thead>
                   <tbody>
