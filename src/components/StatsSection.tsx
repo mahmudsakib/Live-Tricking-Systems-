@@ -19,7 +19,10 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Mohammad Rashed", batch: "2021" } ,
   { name: "Mostakim", batch: "2021" },
   { name: "Mst Sharifa Akter Niru", batch: "2014" },
-  { name: "Sakib Mahmud", batch: "2016" }
+  { name: "Sakib Mahmud", batch: "2016" },
+  { name: "MAINUL ISLAM", batch: "2007" },
+  { name: "Md. Mahmud", batch: "2016" },
+  { name: "Mohammad Yousuf", batch: "2011" }
 ];
 
 export const StatsSection = () => {
@@ -82,8 +85,9 @@ export const StatsSection = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-16">
             <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-semibold text-foreground">{t.stats.allRegistrationsTitle}</h3>
             
-            <div className="-mx-4 sm:mx-0 overflow-x-auto rounded-none sm:rounded-lg border border-border shadow-none sm:shadow-md">
-              <table className="w-full bg-white min-w-full">
+            <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-lg border border-border shadow-none sm:shadow-md overflow-hidden">
+              <div className="max-h-96 overflow-y-auto overflow-x-auto">
+                <table className="w-full bg-white min-w-full">
                 <thead>
                   <tr className="bg-gradient-to-r from-slate-100 to-slate-200 border-b-2 border-border">
                     <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.slNo}</th>
@@ -93,7 +97,7 @@ export const StatsSection = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {registrations.slice(0, 15).map((reg, idx) => (
+                  {registrations.map((reg, idx) => (
                     <tr key={reg.id} className="border-b border-border hover:bg-slate-50 transition-colors">
                       <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-foreground">{idx + 1}</td>
                       <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-foreground font-semibold">{reg.name}</td>
@@ -107,11 +111,12 @@ export const StatsSection = () => {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
 
-            {registrations.length > 15 && (
+            {registrations.length > 0 && (
               <p className="mt-4 text-center text-sm text-muted-foreground">
-                Showing 15 of {registrations.length} registrations
+                Total: {registrations.length} registrations
               </p>
             )}
 
