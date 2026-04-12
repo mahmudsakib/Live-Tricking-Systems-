@@ -22,7 +22,11 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Sakib Mahmud", batch: "2016" },
   { name: "MAINUL ISLAM", batch: "2007" },
   { name: "Md. Mahmud", batch: "2016" },
-  { name: "Mohammad Yousuf", batch: "2011" }
+  { name: "Mohammad Yousuf", batch: "2011" },
+  { name: "Md Shamim", batch: "2017" },
+  { name: "MD.Yeasin", batch: "2017" },
+  { name: "SIRAZUL ISLAM", batch: "2021" },
+  { name: "Munira", batch: "2025" }
 ];
 
 export const StatsSection = () => {
