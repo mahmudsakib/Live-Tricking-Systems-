@@ -22,22 +22,29 @@ export const EventSection = () => {
         </motion.div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
-          {details.map((d, i) => (
+          {details.map((d, i) => {
+            const gradients = [
+              "bg-gradient-to-br from-[hsl(43,72%,55%)] to-[hsl(38,80%,45%)]",
+              "bg-gradient-to-br from-[hsl(152,45%,28%)] to-[hsl(152,45%,18%)]",
+              "bg-gradient-to-br from-[hsl(43,72%,55%)] to-[hsl(38,80%,45%)]"
+            ];
+            return (
             <motion.div
               key={d.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-gradient rounded-xl border border-border p-8 shadow-elegant text-center"
+              className={`${gradients[i]} rounded-xl border-0 p-8 shadow-elegant text-center`}
             >
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                <d.icon className="h-6 w-6 text-primary" />
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
+                <d.icon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="mt-4 font-display text-lg font-semibold text-foreground">{d.label}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{d.value}</p>
+              <h3 className="mt-4 font-display text-lg font-semibold text-white">{d.label}</h3>
+              <p className="mt-2 text-sm text-white/90">{d.value}</p>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Users, Layers, UserCheck } from "lucide-react";
+import { Users, Layers, UserCheck, Crown } from "lucide-react";
 import { useEffect } from "react";
 import { useRegistration } from "@/context/RegistrationContext";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -49,7 +49,7 @@ export const StatsSection = () => {
         });
       });
     }, 0);
-  }, []); // Only run on mount
+  }, [addRegistration]); // Only run on mount
 
   const stats = [
     { icon: Users, label: t.stats.totalRegistered, value: STATS_VALUES.totalRegistered },
@@ -65,41 +65,48 @@ export const StatsSection = () => {
         </motion.div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          {stats.map((s, i) => (
+          {stats.map((s, i) => {
+            const gradients = [
+              "bg-gradient-to-br from-[hsl(152,45%,28%)] to-[hsl(152,45%,18%)]",
+              "bg-gradient-to-br from-[hsl(43,72%,55%)] to-[hsl(38,80%,45%)]",
+              "bg-gradient-to-br from-[hsl(152,45%,28%)] to-[hsl(152,45%,18%)]"
+            ];
+            return (
             <motion.div
               key={s.label}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-gradient rounded-xl border border-border p-8 text-center shadow-elegant"
+              className={`${gradients[i]} rounded-xl border-0 p-8 text-center shadow-elegant`}
             >
-              <s.icon className="mx-auto h-8 w-8 text-secondary" />
-              <div className="mt-3 font-display text-4xl font-bold text-foreground">{s.value}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
+              <s.icon className="mx-auto h-8 w-8 text-white" />
+              <div className="mt-3 font-display text-4xl font-bold text-white">{s.value}</div>
+              <div className="mt-1 text-sm text-white/90">{s.label}</div>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
 
         {registrations.length > 0 && (
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-16">
-            <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-semibold text-foreground">{t.stats.allRegistrationsTitle}</h3>
+            <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-bold text-[hsl(152,45%,28%)]">{t.stats.allRegistrationsTitle}</h3>
             
             <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-lg border border-border shadow-none sm:shadow-md overflow-hidden">
-              <div className="max-h-96 overflow-y-auto overflow-x-auto">
+              <div className="max-h-[550px] overflow-y-auto overflow-x-auto">
                 <table className="w-full bg-white min-w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-slate-100 to-slate-200 border-b-2 border-border">
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.slNo}</th>
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.name}</th>
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.batch}</th>
-                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-semibold text-foreground">{t.stats.registration}</th>
+                  <tr className="bg-gradient-to-r from-[hsl(152,45%,28%)] to-[hsl(152,45%,18%)] border-b-2 border-border">
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-bold text-white">{t.stats.slNo}</th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-bold text-white">{t.stats.name}</th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-bold text-white">{t.stats.batch}</th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-bold text-white">{t.stats.registration}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {registrations.map((reg, idx) => (
+                  {[...registrations].reverse().map((reg, idx) => (
                     <tr key={reg.id} className="border-b border-border hover:bg-slate-50 transition-colors">
-                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-foreground">{idx + 1}</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-medium text-foreground">{registrations.length - idx}</td>
                       <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-foreground font-semibold">{reg.name}</td>
                       <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-muted-foreground">{reg.batch}</td>
                       <td className="px-3 sm:px-6 py-3 sm:py-4 text-center">
@@ -122,14 +129,14 @@ export const StatsSection = () => {
 
             {/* Batch-wise Registration Count Summary */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12">
-              <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-semibold text-foreground">{t.stats.registrationByBatchTitle}</h3>
+              <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-bold text-[hsl(43,72%,55%)]">{t.stats.registrationByBatchTitle}</h3>
               
               <div className="-mx-4 sm:mx-0 overflow-x-auto rounded-none sm:rounded-lg border border-border shadow-none sm:shadow-md">
                 <table className="w-full bg-white min-w-full">
                   <thead>
-                    <tr className="bg-gradient-to-r from-slate-100 to-slate-200 border-b-2 border-border">
-                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-foreground">{t.stats.batch}</th>
-                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-semibold text-foreground">{t.stats.totalRegistrations}</th>
+                    <tr className="bg-gradient-to-r from-[hsl(43,72%,55%)] to-[hsl(38,80%,45%)] border-b-2 border-border">
+                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-bold text-white">{t.stats.batch}</th>
+                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-center text-xs sm:text-sm font-bold text-white">{t.stats.totalRegistrations}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -148,7 +155,10 @@ export const StatsSection = () => {
 
                       return sortedBatches.map((item, idx) => (
                         <tr key={item.batch} className={idx % 2 === 0 ? "bg-white border-b border-border hover:bg-slate-50" : "bg-slate-50 border-b border-border hover:bg-slate-100"}>
-                          <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-semibold text-foreground">{item.batch}</td>
+                          <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm font-semibold text-foreground flex items-center justify-between">
+                            <span>{item.batch}</span>
+                            {idx === 0 && <Crown className="h-5 w-5 text-yellow-500" />}
+                          </td>
                           <td className="px-3 sm:px-6 py-3 sm:py-4 text-center">
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-secondary text-white">
                               {item.count}
