@@ -48,7 +48,7 @@ export const HeroSection = () => {
   const floatDelay = [0, 0.5, 1, 1.5];
 
   return (
-    <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden pt-32 sm:pt-40">
+    <section id="hero" className="relative flex min-h-screen items-center justify-center overflow-hidden pt-40 sm:pt-48">
       <motion.img src={heroBanner} alt="Students group photo" width={1920} height={768} className="absolute inset-0 h-[120%] w-full object-cover" style={{ y: imgY }} />
       <div className="absolute inset-0 hero-gradient opacity-85" />
       <div className="absolute inset-0 geometric-pattern opacity-40" />
