@@ -27,7 +27,12 @@ const SAMPLE_REGISTRATIONS = [
   { name: "MD.Yeasin", batch: "2017" },
   { name: "SIRAZUL ISLAM", batch: "2021" },
   { name: "Munira", batch: "2025" },
-  { name: "Md Ahidul Islam", batch: "2021" }
+  { name: "Md Ahidul Islam", batch: "2021" },
+  { name: "Sadia Akter", batch: "2021" },
+  { name: "MAHIN", batch: "2025" },
+  { name: "Md. Abidur Rahman", batch: "2015" },
+  { name: "AbuSaim", batch: "2021" },
+  { name: "MD.Faysal Hosen", batch: "2020" }
 ];
 
 export const StatsSection = () => {
