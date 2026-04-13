@@ -26,7 +26,8 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Md Shamim", batch: "2017" },
   { name: "MD.Yeasin", batch: "2017" },
   { name: "SIRAZUL ISLAM", batch: "2021" },
-  { name: "Munira", batch: "2025" }
+  { name: "Munira", batch: "2025" },
+  { name: "Md Ahidul Islam", batch: "2021" }
 ];
 
 export const StatsSection = () => {
