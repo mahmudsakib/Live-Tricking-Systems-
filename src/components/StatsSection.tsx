@@ -56,8 +56,15 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Mst. Lima Akter", batch: "2021" },
   { name: "MD. Abu Talha", batch: "2020" },
   { name: "Jasial kabir Apu", batch: "2011" },
-  { name: "Airin Aktet", batch: "2021" },
-  { name: "Musfiqa Rahman", batch: "2021" }
+  { name: "Airin Akter", batch: "2021" },
+  { name: "Musfiqa Rahman", batch: "2021" },
+  { name: "Md Rifatul Islam", batch: "2021" },
+  { name: "Mst:- Tamima Hawlader", batch: "2017" },
+  { name: "MD. NASIR", batch: "2017" },
+  { name: "RESHMA AKTER", batch: "2017" },
+  { name: "Md:ARiFUL HAQE", batch: "2021" },
+  { name: "Md Baizid Bostami", batch: "2021" },
+  { name: "Md. Nishat", batch: "2016" }
 ];
 
 export const StatsSection = () => {
