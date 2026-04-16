@@ -1,5 +1,5 @@
 export const STATS_VALUES = {
-  totalRegistered: 45,
+  totalRegistered: 49,
   batchesParticipating: 15,
   paidMembers: 6,
 };
