@@ -66,7 +66,10 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Md Baizid Bostami", batch: "2021" },
   { name: "Md. Nishat", batch: "2016" },
   { name: "SHARMIN AKTER", batch: "2006" },
-  { name: "SOWROV AHMAD", batch: "2021" }
+  { name: "SOWROV AHMAD", batch: "2021" },
+  { name: "Naiyem", batch: "2021" },
+  { name: "Tanjilah Akther", batch: "2021" },
+  { name: "Mst- Sudipta salim muna", batch: "2017" }
 ];
 
 export const StatsSection = () => {
