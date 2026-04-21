@@ -7,7 +7,6 @@ import { STATS_VALUES } from "@/lib/statsConstants";
 
 // Sample data - Edit here to change what appears in the table (Only Name and Batch are displayed)
 const SAMPLE_REGISTRATIONS = [
-  { name: "Mahfuzur Rahman jitu", batch: "2023" },
   { name: "MD:Alamin", batch: "2022" },
   { name: "MD Nayeem babu", batch: "2016" },
   { name: "Md Ariful Islam Akash ", batch: "2018" },
@@ -33,7 +32,6 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Md. Abidur Rahman", batch: "2015" },
   { name: "AbuSaim", batch: "2021" },
   { name: "MD.Faysal Hosen", batch: "2020" },
-  { name: "MD.Shariful Islam", batch: "2022" },
   { name: "Md. Sakib Hasan", batch: "2016" },
   { name: "Emon Hasan", batch: "2021" },
   { name: "Mahfujur Rahman", batch: "2021" },
@@ -90,7 +88,16 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Tahira Jahan Mim", batch: "2017" },
   { name: "Md. Mahfujur Rahman", batch: "2020" },
   { name: "Rimon Ahamed", batch: "2016" },
-  { name: "Sagor Ahamed", batch: "2016" }
+  { name: "Sagor Ahamed", batch: "2016" },
+  { name: "Saidul Islam", batch: "2015" },
+  { name: "Tanjum Akter Eti", batch: "2015" },
+  { name: "Mizanur Rahman Sabuj", batch: "2015" },
+  { name: "Dilara Afroz Mim", batch: "2015" },
+  { name: "Sabikunnahar Sabnur", batch: "2015" },
+  { name: "Obidul Islam Milon", batch: "2015" },
+  { name: "Emadul Islam Emon", batch: "2015" },
+  { name: "Mainul Hasan", batch: "2015" },
+  { name: "Shamrat", batch: "2015" }
 ];
 
 export const StatsSection = () => {
