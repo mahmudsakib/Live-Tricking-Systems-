@@ -97,7 +97,17 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Obidul Islam Milon", batch: "2015" },
   { name: "Emadul Islam Emon", batch: "2015" },
   { name: "Mainul Hasan", batch: "2015" },
-  { name: "Shamrat", batch: "2015" }
+  { name: "Shamrat", batch: "2015" },
+  { name: "MD: Rakibul Islam", batch: "2022" },
+  { name: "Md. Miraz", batch: "2015" },
+  { name: "Miarj Hossen", batch: "2015" },
+  { name: "Sajal Ahamed", batch: "2015" },
+  { name: "Shakil Ahamed", batch: "2015" },
+  { name: "Ahadul Islam", batch: "2015" },
+  { name: "Prince Ariyan", batch: "2015" },
+  { name: "Nayem Hossen", batch: "2015" },
+  { name: "Al-Amin", batch: "2015" },
+  { name: "Eti Moni", batch: "2019" },
 ];
 
 export const StatsSection = () => {
