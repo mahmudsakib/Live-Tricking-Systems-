@@ -11,6 +11,7 @@ export interface Registration {
   paymentStatus: "paid" | "pending";
   registrationType: "student" | "guest";
   image: string;
+  tshirtSize: string;
   createdAt: string;
 }
 
