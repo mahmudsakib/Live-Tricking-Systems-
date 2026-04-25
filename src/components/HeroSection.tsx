@@ -8,7 +8,7 @@ import { STATS_VALUES } from "@/lib/statsConstants";
 import heroBanner from "@/assets/hero-banner.jpg";
 import schoolLogo from "@/assets/school-logo.png";
 
-const EVENT_DATE = new Date("2026-04-30T10:00:00");
+const EVENT_DATE = new Date("2026-04-30T11:59:59");
 
 const useCountdown = (target: Date) => {
   const calc = () => {
