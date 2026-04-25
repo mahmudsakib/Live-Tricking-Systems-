@@ -12,6 +12,7 @@ export interface Registration {
   registrationType: "student" | "guest";
   image: string;
   tshirtSize: string;
+  guests: number;
   createdAt: string;
 }
 
