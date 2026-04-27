@@ -122,7 +122,12 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Md. Nadim Mahmud", batch: "2020", tshirtSize: "L", guests: 0 },
   { name: "Milon", batch: "2015", tshirtSize: "XL", guests: 0 },
   { name: "Meshkat Ahmed", batch: "2019", tshirtSize: "L", guests: 0 },
-  { name: "Sumaiya", batch: "2019", tshirtSize: "L", guests: 0 }
+  { name: "Sumaiya", batch: "2019", tshirtSize: "L", guests: 0 },
+  { name: "Umme Habiba", batch: "2019", tshirtSize: "M", guests: 0 },
+  { name: "Tanha", batch: "2024", tshirtSize: "2XL", guests: 2 },
+  { name: "Fozly Rabbi", batch: "2016", tshirtSize: "XL", guests: 0 },
+  { name: "Mahmud Hossain Abon", batch: "2016", tshirtSize: "XL", guests: 0 },
+  { name: "Sumaiya Aktar Ripa", batch: "2021", tshirtSize: "XL", guests: 0 }
 ];
 
 export const StatsSection = () => {
