@@ -52,7 +52,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Tuhin Bahadur", batch: "2021", tshirtSize: "2XL", guests: 0 },
   { name: "Alamin", batch: "2021", tshirtSize: "L", guests: 0 },
   { name: "Mst. Lima Akter", batch: "2021", tshirtSize: "M", guests: 0 },
-  { name: "MD. Abu Talha", batch: "2020", tshirtSize: "XL", guests: 0 },
+  { name: "Talha Ahmed", batch: "2020", tshirtSize: "XL", guests: 0 },
   { name: "Jasial kabir Apu", batch: "2011", tshirtSize: "XL", guests: 0 },
   { name: "Airin Akter", batch: "2021", tshirtSize: "XL", guests: 0 },
   { name: "Musfiqa Rahman", batch: "2021", tshirtSize: "XL", guests: 0 },
@@ -119,7 +119,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Munim Ahmmed Joy", batch: "2018", tshirtSize: "XL", guests: 0 },
   { name: "Mahmud Hasan", batch: "2018", tshirtSize: "M", guests: 0 },
   { name: "MD Rakibul Hasan", batch: "2017", tshirtSize: "L", guests: 0 },
-  { name: "Md. Nadim Mahmud", batch: "2020", tshirtSize: "L", guests: 0 },
+  { name: "Nadim Mahmud", batch: "2020", tshirtSize: "L", guests: 0 },
   { name: "Milon", batch: "2015", tshirtSize: "XL", guests: 0 },
   { name: "Meshkat Ahmed", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Sumaiya", batch: "2019", tshirtSize: "L", guests: 0 },
@@ -132,7 +132,13 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Sajib Khan", batch: "2002", tshirtSize: "L", guests: 1 },
   { name: "MD MASHIUR RAHMAN MURAD", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Md  Jihad", batch: "2017", tshirtSize: "M", guests: 0 },
-  { name: "MD. Rafsan", batch: "2020", tshirtSize: "M", guests: 0 }
+  { name: "MD. Rafsan", batch: "2020", tshirtSize: "M", guests: 0 },
+  { name: "Sajid Khan", batch: "2017", tshirtSize: "L", guests: 0 },
+  { name: "Akash Islam", batch: "2017", tshirtSize: "L", guests: 0 },
+  { name: "Mst:Sumaiya Akter", batch: "2018", tshirtSize: "M", guests: 0 },
+  { name: "Sakib", batch: "2019", tshirtSize: "XL", guests: 0 },
+  { name: "Moin", batch: "2019", tshirtSize: "L", guests: 0 },
+  { name: "Jihad Bin Jidu", batch: "2024", tshirtSize: "M", guests: 0 }
 ];
 
 export const StatsSection = () => {
