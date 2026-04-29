@@ -143,7 +143,19 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Munira Akter Tonni", batch: "2018", tshirtSize: "2XL", guests: 0 },
   { name: "Shah Md. Somrat", batch: "2018", tshirtSize: "XL", guests: 0 },
   { name: "Akash Islam", batch: "2024", tshirtSize: "XL", guests: 0 },
-  { name: "Mahabub", batch: "2016", tshirtSize: "XL", guests: 0 }
+  { name: "Mahabub", batch: "2016", tshirtSize: "XL", guests: 0 },
+  { name: "Munira Islam", batch: "2011", tshirtSize: "2XL", guests: 0 },
+  { name: "Maria Islam", batch: "2014", tshirtSize: "2XL", guests: 0 },
+  { name: "Faria Islam", batch: "2017", tshirtSize: "2XL", guests: 0 },
+  { name: "Fahim", batch: "2016", tshirtSize: "L", guests: 0 },
+  { name: "Mizan", batch: "2007", tshirtSize: "L", guests: 0 },
+  { name: "Sohel", batch: "2007", tshirtSize: "XL", guests: 0 },
+  { name: "Rumana Akter", batch: "2015", tshirtSize: "XL", guests: 2 },
+  { name: "Ruhul Amin", batch: "2007", tshirtSize: "XL", guests: 0 },
+  { name: "Mohibulla", batch: "2021", tshirtSize: "L", guests: 0 },
+  { name: "Yeasin Arafat", batch: "2019", tshirtSize: "XL", guests: 0 },
+  { name: "FUAD", batch: "2019", tshirtSize: "L", guests: 0 },
+  { name: "Sabbir Hossen Rashed", batch: "2019", tshirtSize: "L", guests: 0 }
 
 ];
 
