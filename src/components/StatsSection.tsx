@@ -57,7 +57,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Airin Akter", batch: "2021", tshirtSize: "XL", guests: 0 },
   { name: "Musfiqa Rahman", batch: "2021", tshirtSize: "XL", guests: 0 },
   { name: "Md Rifatul Islam", batch: "2021", tshirtSize: "L", guests: 0 },
-  { name: "Mst:- Tamima Hawlader", batch: "2017", tshirtSize: "2XL", guests: 1 },
+  { name: "Tamima", batch: "2017", tshirtSize: "2XL", guests: 1 },
   { name: "MD. NASIR", batch: "2017", tshirtSize: "M", guests: 0 },
   { name: "RESHMA AKTER", batch: "2017", tshirtSize: "M", guests: 1 },
   { name: "Md:ARiFUL HAQE", batch: "2021", tshirtSize: "M", guests: 0 },
@@ -121,7 +121,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "MD Rakibul Hasan", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "Nadim Mahmud", batch: "2020", tshirtSize: "L", guests: 0 },
   { name: "Milon", batch: "2015", tshirtSize: "XL", guests: 0 },
-  { name: "Meshkat Ahmed", batch: "2019", tshirtSize: "L", guests: 0 },
+  { name: "Meskat Ahmed", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Sumaiya", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Umme Habiba", batch: "2019", tshirtSize: "M", guests: 0 },
   { name: "Tanha", batch: "2024", tshirtSize: "2XL", guests: 2 },
@@ -138,7 +138,13 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Mst:Sumaiya Akter", batch: "2018", tshirtSize: "M", guests: 0 },
   { name: "Sakib", batch: "2019", tshirtSize: "XL", guests: 0 },
   { name: "Moin", batch: "2019", tshirtSize: "L", guests: 0 },
-  { name: "Jihad Bin Jidu", batch: "2024", tshirtSize: "M", guests: 0 }
+  { name: "Jihad Bin Jidu", batch: "2024", tshirtSize: "M", guests: 0 },
+  { name: "Ariful islam", batch: "2021", tshirtSize: "M", guests: 0 },
+  { name: "Munira Akter Tonni", batch: "2018", tshirtSize: "2XL", guests: 0 },
+  { name: "Shah Md. Somrat", batch: "2018", tshirtSize: "XL", guests: 0 },
+  { name: "Akash Islam", batch: "2024", tshirtSize: "XL", guests: 0 },
+  { name: "Mahabub", batch: "2016", tshirtSize: "XL", guests: 0 }
+
 ];
 
 export const StatsSection = () => {
