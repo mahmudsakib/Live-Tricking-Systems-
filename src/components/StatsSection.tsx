@@ -113,7 +113,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "MD : Rahat Hossain", batch: "2022", tshirtSize: "L", guests: 0 },
   { name: "MD Jakariya", batch: "2022", tshirtSize: "M", guests: 0 },
   { name: "Nayeem Hasan", batch: "2016", tshirtSize: "XL", guests: 0 },
-  { name: "Rukaiya Jahan Pushpita", batch: "2022", tshirtSize: "L", guests: 0 },
+  { name: "Kawsar", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Md. Hasan", batch: "2008", tshirtSize: "L", guests: 0 },
   { name: "Arifa Akter", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "Munim Ahmmed Joy", batch: "2018", tshirtSize: "XL", guests: 0 },
