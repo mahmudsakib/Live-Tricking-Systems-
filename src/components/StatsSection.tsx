@@ -143,7 +143,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Munira Akter Tonni", batch: "2018", tshirtSize: "2XL", guests: 0 },
   { name: "Shah Md. Somrat", batch: "2018", tshirtSize: "XL", guests: 0 },
   { name: "Akash Islam", batch: "2024", tshirtSize: "XL", guests: 0 },
-  { name: "Mahabub", batch: "2016", tshirtSize: "XL", guests: 0 },
+  { name: "MAHABUB", batch: "2016", tshirtSize: "XL", guests: 0 },
   { name: "Munira Islam", batch: "2011", tshirtSize: "2XL", guests: 0 },
   { name: "Maria Islam", batch: "2014", tshirtSize: "2XL", guests: 0 },
   { name: "Faria Islam", batch: "2017", tshirtSize: "2XL", guests: 0 },
@@ -205,16 +205,19 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Dr. Sakib Uddin", batch: "2013", tshirtSize: "XL", guests: 0 },
   { name: "Al Amin", batch: "2016", tshirtSize: "2XL", guests: 1 },
   { name: "Samia Akter", batch: "2016", tshirtSize: "L", guests: 0 },
+  { name: "Md. Masud", batch: "2013", tshirtSize: "L", guests: 0 },
   { name: "Md. Jedan", batch: "2020", tshirtSize: "L", guests: 0 },
   { name: "Sunra Jahan Tamanna", batch: "2016", tshirtSize: "XL", guests: 0 },
   { name: "Abdullah Al Emon", batch: "2021", tshirtSize: "M", guests: 0 },
   { name: "Md. Fakrul Hasan", batch: "2016", tshirtSize: "XL", guests: 0 },
   { name: "Md. Riadul Islam", batch: "2011", tshirtSize: "M", guests: 0 },
-  { name: "Lamia Jahan", batch: "2017", tshirtSize: "M", guests: 0 },
+  { name: "Lamia Jahan", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "Shafikul Islam Ovir", batch: "2007", tshirtSize: "XL", guests: 0 },
   { name: "Md Tanvir Ahmed Shuvo", batch: "2012", tshirtSize: "XL", guests: 0 },
   { name: "Samiha Binte Alim", batch: "2019", tshirtSize: "L", guests: 0 },
-  { name: "Mahfuja Rozy", batch: "2013", tshirtSize: "M", guests: 1 }
+  { name: "Mahfuja Rozy", batch: "2013", tshirtSize: "M", guests: 1 },
+  { name: "Munmun", batch: "2015", tshirtSize: "L", guests: 0 },
+  { name: "Nusrat Jahan Nipu", batch: "2013", tshirtSize: "XL", guests: 1 }
 ];
 
 export const StatsSection = () => {
