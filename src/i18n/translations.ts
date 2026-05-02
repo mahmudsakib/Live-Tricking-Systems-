@@ -62,7 +62,7 @@ export const translations = {
     },
     announcement: {
       header: "Important Announcement",
-      message: "📢 Important Update - Eid Reunion 2026\n\n🎯 About the Event\n★ An Eid reunion will be organized for former students\n★ Held on the third day of Eid\n\n👥 Who Can Register?\n★ Anyone who studied at this school (6th class to SSC)\n★ Spouses and children of former students (as guests)\n\n💰 Registration Fees\n★ Students: 1000 BDT\n★ Guests: 500 BDT\n\n📅 Registration Timeline\n★ Starts: April 10, Friday (2026)\n★ Deadline: April 30, 2026\n\n📍 Venue: Balihari Secondary School\n\nPromoted by: Event Organizing Committee & Registration Sub-committee",
+      message: "📢 Important Update - Eid Reunion 2026\n\n🎯 About the Event\n★ An Eid reunion will be organized for former students\n★ Held on the third day of Eid\n\n👥 Who Can Register?\n★ Anyone who studied at this school (6th class to SSC)\n★ Spouses and children of former students (as guests)\n\n💰 Registration Fees\n★ Students: 1000 BDT\n★ Guests: 500 BDT\n\n📅 Registration Timeline\n★ Starts: April 10, Friday (2026)\n★ Deadline: May 7, 2026\n\n📍 Venue: Balihari Secondary School\n\nPromoted by: Event Organizing Committee & Registration Sub-committee",
     },
     footer: {
       schoolName: "Balihari High School",
@@ -138,7 +138,7 @@ export const translations = {
     },
     announcement: {
       header: "গুরুত্বপূর্ণ ঘোষণা",
-      message: "📢 গুরুত্বপূর্ণ আপডেট - ঈদ পুনর্মিলনী ২০২৬\n\n🎯 অনুষ্ঠান সম্পর্কে\n★ প্রাক্তন শিক্ষার্থীদের নিয়ে ঈদ পুনর্মিলনী আয়োজন করা হবে\n★ ঈদের তৃতীয় দিনে অনুষ্ঠিত হবে\n\n👥 কে নিবন্ধন করতে পারবেন?\n★ যে কেউ এই বিদ্যালয়ে অধ্যয়ন করেছেন (৬ষ্ঠ শ্রেণি থেকে এসএসসি)\n★ প্রাক্তন শিক্ষার্থীদের স্বামী/স্ত্রী ও সন্তানরা (অতিথি হিসেবে)\n\n💰 নিবন্ধন ফি\n★ শিক্ষার্থী: ১০০০ টাকা\n★ অতিথি: ৫০০ টাকা\n\n📅 নিবন্ধন সময়সূচী\n★ শুরু: ১০ এপ্রিল, শুক্রবার (২০২৬)\n★ সময়সীমা: ৩০ এপ্রিল, ২০২৬\n\n📍 স্থান: বালিহারী মাধ্যমিক বিদ্যালয়\n\nপ্রচারে: অনুষ্ঠান আয়োজক কমিটি ও রেজিস্ট্রেশন উপকমিটি",
+      message: "📢 গুরুত্বপূর্ণ আপডেট - ঈদ পুনর্মিলনী ২০২৬\n\n🎯 অনুষ্ঠান সম্পর্কে\n★ প্রাক্তন শিক্ষার্থীদের নিয়ে ঈদ পুনর্মিলনী আয়োজন করা হবে\n★ ঈদের তৃতীয় দিনে অনুষ্ঠিত হবে\n\n👥 কে নিবন্ধন করতে পারবেন?\n★ যে কেউ এই বিদ্যালয়ে অধ্যয়ন করেছেন (৬ষ্ঠ শ্রেণি থেকে এসএসসি)\n★ প্রাক্তন শিক্ষার্থীদের স্বামী/স্ত্রী ও সন্তানরা (অতিথি হিসেবে)\n\n💰 নিবন্ধন ফি\n★ শিক্ষার্থী: ১০০০ টাকা\n★ অতিথি: ৫০০ টাকা\n\n📅 নিবন্ধন সময়সূচী\n★ শুরু: ১০ এপ্রিল, শুক্রবার (২০২৬)\n★ সময়সীমা: ৭ মে, ২০২৬\n\n📍 স্থান: বালিহারী মাধ্যমিক বিদ্যালয়\n\nপ্রচারে: অনুষ্ঠান আয়োজক কমিটি ও রেজিস্ট্রেশন উপকমিটি",
     },
     footer: {
       schoolName: "বালিহারী মাধ্যমিক বিদ্যালয়",
