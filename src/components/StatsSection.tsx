@@ -134,7 +134,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Md  Jihad", batch: "2017", tshirtSize: "M", guests: 0 },
   { name: "MD. Rafsan", batch: "2020", tshirtSize: "M", guests: 0 },
   { name: "Sajid Khan", batch: "2017", tshirtSize: "L", guests: 0 },
-  { name: "Akash Islam", batch: "2017", tshirtSize: "L", guests: 0 },
+  { name: "MD SHAMIM HASAN", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "Mst:Sumaiya Akter", batch: "2018", tshirtSize: "M", guests: 0 },
   { name: "Sakib", batch: "2019", tshirtSize: "XL", guests: 0 },
   { name: "Moin", batch: "2019", tshirtSize: "L", guests: 0 },
