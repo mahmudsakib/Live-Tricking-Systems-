@@ -133,7 +133,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "MD MASHIUR RAHMAN MURAD", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Md  Jihad", batch: "2017", tshirtSize: "M", guests: 0 },
   { name: "MD. Rafsan", batch: "2020", tshirtSize: "M", guests: 0 },
-  { name: "Sajid Khan", batch: "2017", tshirtSize: "L", guests: 0 },
+  { name: "MD. SAZID KHAN", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "MD SHAMIM HASAN", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "Mst:Sumaiya Akter", batch: "2018", tshirtSize: "M", guests: 0 },
   { name: "Sakib", batch: "2019", tshirtSize: "XL", guests: 0 },
@@ -176,14 +176,14 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Md. Hassan Mahmud", batch: "2012", tshirtSize: "M", guests: 1 },
   { name: "Ramisa Islam", batch: "2021", tshirtSize: "L", guests: 0 },
   { name: "Atik", batch: "2017", tshirtSize: "XL", guests: 0 },
-  { name: "Shaon", batch: "2019", tshirtSize: "L", guests: 0 },
+  { name: "Shawon Ahmed", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Saifun Nahar", batch: "2011", tshirtSize: "XL", guests: 1 },
   { name: "JAED EMON", batch: "2019", tshirtSize: "XL", guests: 0 },
   { name: "Mahafuj Islam", batch: "2024", tshirtSize: "XL", guests: 0 },
   { name: "Ismail", batch: "2019", tshirtSize: "M", guests: 0 },
   { name: "Suma Akter", batch: "2019", tshirtSize: "M", guests: 0 },
   { name: "Ruhul Amin", batch: "1992", tshirtSize: "2XL", guests: 2 },
-  { name: "Kamal Parvaj", batch: "1992", tshirtSize: "L", guests: 0 },
+  { name: "Kamal Parvej", batch: "1992", tshirtSize: "L", guests: 0 },
   { name: "Munia Islam", batch: "2015", tshirtSize: "L", guests: 0 },
   { name: "Mahamud", batch: "2015", tshirtSize: "L", guests: 0 },
   { name: "Nadia Islam Rumpa", batch: "2015", tshirtSize: "L", guests: 0 },
@@ -222,7 +222,9 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Faria Ibnath", batch: "2019", tshirtSize: "L", guests: 0 },
   { name: "Md Riaz", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "Tuhin Amin Bappy", batch: "2015", tshirtSize: "L", guests: 0 },
-  { name: "Afroza Akter", batch: "2020", tshirtSize: "XL", guests: 0 }
+  { name: "Afroza Akter", batch: "2020", tshirtSize: "XL", guests: 0 },
+  { name: "MD Reaz Ahmed Nil", batch: "2016", tshirtSize: "XL", guests: 0 },
+  { name: "MD. NAEM", batch: "2026", tshirtSize: "L", guests: 0 }
 ];
 
 export const StatsSection = () => {
