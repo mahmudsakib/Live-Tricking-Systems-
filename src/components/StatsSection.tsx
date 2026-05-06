@@ -233,7 +233,10 @@ const SAMPLE_REGISTRATIONS = [
   { name: "MD. RAKIB", batch: "2019", tshirtSize: "XL", guests: 0 },
   { name: "Md. Aminul", batch: "2016", tshirtSize: "L", guests: 0 },
   { name: "Kaniz Faria", batch: "2016", tshirtSize: "L", guests: 0 },
-  { name: "Ruhul Amin", batch: "2016", tshirtSize: "L", guests: 0 }
+  { name: "Ruhul Amin", batch: "2016", tshirtSize: "M", guests: 0 },
+  { name: "Laboni Akter Shela", batch: "2011", tshirtSize: "M", guests: 1 },
+  { name: "MD. SAZZADUR RAHMAN", batch: "2012", tshirtSize: "XL", guests: 0 },
+  { name: "MAHATHIR", batch: "2026", tshirtSize: "L", guests: 0 }
 ];
 
 export const StatsSection = () => {
