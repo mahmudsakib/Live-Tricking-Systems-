@@ -130,7 +130,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Sumaiya Aktar Ripa", batch: "2021", tshirtSize: "XL", guests: 0 },
   { name: "Md. Farhan Ahmed", batch: "2016", tshirtSize: "L", guests: 0 },
   { name: "Sajib Khan", batch: "2002", tshirtSize: "L", guests: 1 },
-  { name: "MD MASHIUR RAHMAN MURAD", batch: "2019", tshirtSize: "L", guests: 0 },
+  { name: "MD MASHIUR RAHMAN MURAD", batch: "2019", tshirtSize: "L", guests: 1 },
   { name: "Md  Jihad", batch: "2017", tshirtSize: "M", guests: 0 },
   { name: "MD. Rafsan", batch: "2020", tshirtSize: "M", guests: 0 },
   { name: "MD. SAZID KHAN", batch: "2017", tshirtSize: "L", guests: 0 },
@@ -243,7 +243,10 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Robiul Islam", batch: "2015", tshirtSize: "L", guests: 0 },
   { name: "Lamia Islam", batch: "2020", tshirtSize: "M", guests: 0 },
   { name: "Moriom", batch: "2026", tshirtSize: "M", guests: 0 },
-  
+  { name: "Rimi Bahadur", batch: "2016", tshirtSize: "2XL", guests: 0 },
+  { name: "Md. Jubaer", batch: "2017", tshirtSize: "L", guests: 0 },
+  { name: "MD. SOWROV ISLAM", batch: "2026", tshirtSize: "L", guests: 0 },
+  { name: "Nusrat Jahan Rimi", batch: "2016", tshirtSize: "XL", guests: 2 }
 ];
 
 export const StatsSection = () => {
