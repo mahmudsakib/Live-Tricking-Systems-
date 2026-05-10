@@ -20,7 +20,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Mst Sharifa Akter Niru", batch: "2014", tshirtSize: "S", guests: 1 },
   { name: "Sakib Mahmud", batch: "2016", tshirtSize: "XL", guests: 0 },
   { name: "MAINUL ISLAM", batch: "2007", tshirtSize: "L", guests: 2 },
-  { name: "Md. Mahmud", batch: "2016", tshirtSize: "XL", guests: 0 },
+  { name: "Md. Mahmud", batch: "2016", tshirtSize: "XL", guests: 1 },
   { name: "Mohammad Yousuf", batch: "2011", tshirtSize: "L", guests: 0 },
   { name: "Md Shamim", batch: "2017", tshirtSize: "XL", guests: 0 },
   { name: "MD.Yeasin", batch: "2017", tshirtSize: "L", guests: 0 },
@@ -76,7 +76,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "MST Marjia Akter", batch: "2021", tshirtSize: "XL", guests: 0 },
   { name: "Sakib Hossen", batch: "2021", tshirtSize: "L", guests: 0 },
   { name: "MD. SAGOR", batch: "2019", tshirtSize: "L", guests: 0 },
-  { name: "Sha-Jamil", batch: "2021", tshirtSize: "L", guests: 0 },
+  { name: "Shah Jamil", batch: "2021", tshirtSize: "L", guests: 0 },
   { name: "Md. Shawan", batch: "2019", tshirtSize: "XL", guests: 0 },
   { name: "Tasnim Tahia", batch: "2021", tshirtSize: "M", guests: 0 },
   { name: "A.B ARIF BILLAH", batch: "2016", tshirtSize: "L", guests: 0 },
@@ -322,7 +322,13 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Md. Riaj Uddin", batch: "2000", tshirtSize: "L", guests: 0 },
   { name: "Md. Milon", batch: "2002", tshirtSize: "L", guests: 0 },
   { name: "Md. Rahmat Ulla", batch: "2002", tshirtSize: "L", guests: 0 },
-  { name: "Md. Mamun Mia", batch: "2002", tshirtSize: "XL", guests: 0 }
+  { name: "Md. Mamun Mia", batch: "2002", tshirtSize: "XL", guests: 0 },
+  { name: "Md. Tanvir Ahmed", batch: "2002", tshirtSize: "XL", guests: 0 },
+  { name: "ARAFAT ABIR", batch: "2026", tshirtSize: "L", guests: 0 },
+  { name: "Ishrat Jahan Koli", batch: "2016", tshirtSize: "XL", guests: 0 },
+  { name: "Afsana Mimi", batch: "2015", tshirtSize: "XL", guests: 0 },
+  { name: "Imran", batch: "2013", tshirtSize: "L", guests: 0 },
+  { name: "Morium Sultana", batch: "2013", tshirtSize: "L", guests: 1 }
 ];
 
 export const StatsSection = () => {
