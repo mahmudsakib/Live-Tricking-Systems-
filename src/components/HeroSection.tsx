@@ -97,10 +97,10 @@ export const HeroSection = () => {
               key={unit}
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: floatDelay[i] }}
-              className="flex flex-col items-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/10 px-5 py-3 backdrop-blur-sm"
+              className="flex flex-col items-center rounded-xl border border-primary-foreground/10 bg-primary-foreground/10 px-4 py-3 backdrop-blur-sm min-w-[88px]"
             >
-              <span className="font-display text-3xl font-bold text-primary-foreground">{countdown[unit]}</span>
-              <span className="text-xs uppercase tracking-wider text-primary-foreground/60">{t.hero.countdown[unit]}</span>
+              <span className="font-display text-2xl font-bold text-primary-foreground sm:text-3xl">{countdown[unit]}</span>
+              <span className="mt-1 text-xs uppercase tracking-wider text-primary-foreground/60">{t.hero.countdown[unit]}</span>
             </motion.div>
           ))}
         </motion.div>
