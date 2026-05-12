@@ -1,5 +1,7 @@
+export const TOTAL_INCOME = 0;
+
 export const STATS_VALUES = {
-  totalRegistered: 322,
-  batchesParticipating: 31,
-  paidMembers: 73,
+  totalRegistered: 325,
+  batchesParticipating: 30,
+  paidMembers: 75,
 };
