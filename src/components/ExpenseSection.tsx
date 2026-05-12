@@ -55,7 +55,7 @@ export const ExpenseSection = () => {
           >
             <TrendingDown className="mx-auto h-10 w-10 mb-3" />
             <div className="font-display text-4xl font-bold mb-2">
-              ৳{getTotalExpense().toLocaleString()}
+              {getTotalExpense().toLocaleString()}
             </div>
             <div className="text-sm text-red-100">মোট খরচ / Total Expense</div>
           </motion.div>
@@ -77,7 +77,7 @@ export const ExpenseSection = () => {
               ৳{totalIncome.toLocaleString()} - ৳{getTotalExpense().toLocaleString()}
             </div> */}
             <div className="font-display text-4xl font-bold mb-2">
-              ৳{getSubtotal().toLocaleString()}
+              {getSubtotal().toLocaleString()}
             </div>
             <div className="text-sm text-blue-100">Subtotal (Income - Expense)</div>
           </motion.div>
@@ -92,7 +92,7 @@ export const ExpenseSection = () => {
           viewport={{ once: true }}
         >
           <h3 className="mb-6 text-center font-display text-xl sm:text-2xl font-bold text-foreground">
-            খরচের হিসাব (Expense Details)
+            ব্যয়ের বিবরণ (Expense Details)
           </h3>
 
           
