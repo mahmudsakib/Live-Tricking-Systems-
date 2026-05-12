@@ -1,7 +1,7 @@
 export const TOTAL_INCOME = 0;
 
 export const STATS_VALUES = {
-  totalRegistered: 325,
+  totalRegistered: 326,
   batchesParticipating: 30,
-  paidMembers: 75,
+  paidMembers: 80,
 };
