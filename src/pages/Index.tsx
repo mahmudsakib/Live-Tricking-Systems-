@@ -5,19 +5,26 @@ import { EventSection } from "@/components/EventSection";
 import { StatsSection } from "@/components/StatsSection";
 import { AnnouncementSection } from "@/components/AnnouncementSection";
 import { Footer } from "@/components/Footer";
+import { ExpenseSection } from "@/components/ExpenseSection";
+import { FloatingFacebookButton } from "@/components/FloatingFacebookButton";
 import { RegistrationProvider } from "@/context/RegistrationContext";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { ExpenseProvider } from "@/context/ExpenseContext";
 
 const Index = () => (
   <LanguageProvider>
     <RegistrationProvider>
-      <Navbar />
-      <TopAnnouncementBanner />
-      <HeroSection />
-      <StatsSection />
-      <EventSection />
-      <AnnouncementSection />
-      <Footer />
+      <ExpenseProvider>
+        <Navbar />
+        <TopAnnouncementBanner />
+        <HeroSection />
+        <ExpenseSection />
+        <StatsSection />
+        <EventSection />
+        <AnnouncementSection />
+        <Footer />
+        <FloatingFacebookButton />
+      </ExpenseProvider>
     </RegistrationProvider>
   </LanguageProvider>
 );
