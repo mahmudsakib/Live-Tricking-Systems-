@@ -243,7 +243,7 @@ const SAMPLE_REGISTRATIONS = [
   { name: "Robiul Islam", batch: "2015", tshirtSize: "L", guests: 0 },
   { name: "Lamia Islam", batch: "2020", tshirtSize: "M", guests: 0 },
   { name: "Moriom", batch: "2026", tshirtSize: "M", guests: 0 },
-  { name: "Rimi Bahadur", batch: "2016", tshirtSize: "2XL", guests: 0 },
+  { name: "Rimi Bahadur", batch: "2016", tshirtSize: "2XL", guests: 1 },
   { name: "Md. Jubaer", batch: "2017", tshirtSize: "L", guests: 0 },
   { name: "MD. SOWROV ISLAM", batch: "2026", tshirtSize: "L", guests: 0 },
   { name: "Nusrat Jahan Rimi", batch: "2016", tshirtSize: "XL", guests: 2 },
